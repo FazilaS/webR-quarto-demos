@@ -17,6 +17,27 @@ editor: source
 
 ## Background
 Does it really work?
+
+
+So it is only working after running locally. Lets check if any graphs are being displayed or not? 
+
+
+```{r}
+#| echo: false
+#| warning: false
+library(ggplot2)
+ 
+# Create data for chart
+val <-data.frame(course=c('DSA','C++','R','Python'),
+                num=c(77,55,80,60))
+ 
+# Basic Line
+ggplot(data=val, aes(x=course, y=num, group=1)) +
+  geom_line()+
+  geom_point()
+```
+
+
 The purpose of this document is to explore how WebR can be embedded in a 
 Quarto Document for the purposes of teaching _R_. 
 
